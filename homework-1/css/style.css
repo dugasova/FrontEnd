@@ -6,7 +6,6 @@
     font-family: "DM Sans", Arial, sans-serif;
     font-weight: 400;
 }
-
 .container {
     max-width: 1280px;
     min-width: 320px;
@@ -26,5 +25,4 @@
 .acquint-motivation {
     padding-top: 20px; 
     line-height: 30px;
-
 }
