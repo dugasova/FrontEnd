@@ -1,11 +1,11 @@
 // 1. 
-let userName = prompt('Яке Ваше імʼя?');
+const userName = prompt('Яке Ваше імʼя?');
 
 // 2.
-let userSurname = prompt('Яке Ваше прізвище?');
+const userSurname = prompt('Яке Ваше прізвище?');
 
 // 3.
-let userFavoriteNumber = prompt('Яке Ваше улюблене число?');
+let userFavoriteNumber = +prompt('Яке Ваше улюблене число?');
 
 // 4.
 let greeting = `Вітаю, ${userName} ${userSurname}!  Ваше улюблене число - ${userFavoriteNumber}`;
@@ -34,7 +34,7 @@ alert(operationsResult);
 console.log(operationsResult);
 
 // 8.
-let usersBirthYear = prompt('В якому році Ви народились?');
+const usersBirthYear = +prompt('В якому році Ви народились?');
 
 // 9.
 let usersAge = (new Date().getFullYear() - usersBirthYear);
