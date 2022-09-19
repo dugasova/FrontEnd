@@ -46,30 +46,30 @@ for (let i = 10; i <= 100; i += 10) {
 
 // 7.
 let positiveNumbers = 0;
-let negetiveNumbers = 0;
+let negativeNumbers = 0;
 let zeroNumbers = 0;
 let oddNumbers = 0;
-let evenNambers = 0;
+let evenNumbers = 0;
 
 for (let i = 0; i < 15; i++) {
     let number = +prompt(`enter number ${i+1}`);
     if (number > 0) {
         positiveNumbers++;
     } else if (number < 0) {
-        negetiveNumbers++;
+        negativeNumbers++;
     } else {
         zeroNumbers++;
     }
-    if (number % 2 == 0) {
-        evenNambers++;
+    if (number % 2 === 0) {
+        evenNumbers++;
     } else {
         oddNumbers++
     }
 }
 console.log(`Amount of 
 positive numbers are ${positiveNumbers}
-negative numbers are ${negetiveNumbers}
+negative numbers are ${negativeNumbers}
 zero numbers are ${zeroNumbers}
 odd numbers are ${oddNumbers}
-even numbers are ${evenNambers}
+even numbers are ${evenNumbers}
 `);
