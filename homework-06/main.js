@@ -1,6 +1,6 @@
 // 1
 function compareNumbers(num1, num2, num3, num4) {
-    if ((Number.isNaN(num1)) || (Number.isNaN(num2)) || (Number.isNaN(num3)) || (Number.isNaN(num4))) {
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4)) {
         throw 'Parameter is not a number!';
     }
 
@@ -27,7 +27,7 @@ function compareNumbers(num1, num2, num3, num4) {
 console.log(compareNumbers(12, 2, 4, -5));
 
 const lesserNumber = function (num1, num2, num3, num4) {
-    if ((Number.isNaN(num1)) || (Number.isNaN(num2)) || (Number.isNaN(num3)) || (Number.isNaN(num4))) {
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4)) {
         throw 'Parameter is not a number!';
     }
     return Math.min(num1, num2, num3, num4);
@@ -36,7 +36,7 @@ console.log(lesserNumber(2, 3, -7, 8));
 
 // 2
 function greatestCommonDivisor(a, b) {
-    if ((Number.isNaN(a)) || (Number.isNaN(b))) {
+    if (isNaN(a) || isNaN(b)) {
         throw 'Parameter is not a number!';
     }
     if (!Number.isInteger(a) || (!Number.isInteger(b))) {
@@ -48,7 +48,7 @@ function greatestCommonDivisor(a, b) {
 
     let n = Math.min(a, b);
     for (let i = n - 1; i > 1; i--) {
-        if ((a % i == 0) && (b % i == 0)) {
+        if ((a % i === 0) && (b % i === 0)) {
             return i;
         }
     }
@@ -58,7 +58,7 @@ console.log(greatestCommonDivisor(45, 15))
 
 // 3
 const isPerfectNumber = function (n) {
-    if (Number.isNaN(n)) {
+    if (isNaN(n)) {
         throw 'Parameter is not a number!';
     }
     if (n < 1) {
@@ -67,11 +67,11 @@ const isPerfectNumber = function (n) {
 
     let sum = 0;
     for (let i = 1; i < n; i++) {
-        if (n % i == 0) {
+        if (n % i === 0) {
             sum += i;
         }
     }
-    if (sum == n) {
+    if (sum === n) {
         return true;
     }
     return false;
@@ -80,7 +80,7 @@ console.log(isPerfectNumber(6));
 
 // 4
 const getSumNumbers = (a, b) => {
-    if ((Number.isNaN(a)) || (Number.isNaN(b))) {
+    if (isNaN(a) || isNaN(b)) {
         throw 'Parameter is not a number!';
     }
 
@@ -99,17 +99,17 @@ const getSumNumbers = (a, b) => {
 console.log(getSumNumbers(9, -1));
 
 //  5 
-const toFahrenheheit = (celsius) => {
-    if (Number.isNaN(celsius)) {
+const toFahrenheit = (celsius) => {
+    if (isNaN(celsius)) {
         throw 'Parameter is not a number!';
     }
 
     return ((celsius * 9 / 5) + 32);
 }
-console.log(toFahrenheheit(-20));
+console.log(toFahrenheit(-20));
 
 // 6
-function getRandom() {
-    return Math.floor(Math.random() * 41);
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max -min + 1) + min);
 }
-console.log(getRandom());
+console.log(getRandomNumber(0, 40)); 
