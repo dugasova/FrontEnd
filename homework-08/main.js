@@ -55,49 +55,49 @@ const totalProducAmount = PRODUCT_ARRAY.reduce(
 console.log(totalProducAmount);
 
 // Знайти найдорожчий продукт
-expensiveProduct = PRODUCT_ARRAY.sort((a, b) => b.productPrice - a.productPrice)[0]
+const expensiveProduct = PRODUCT_ARRAY.sort((a, b) => b.productPrice - a.productPrice)[0]
 console.log(`The most Expensive product in list is ${expensiveProduct.productName} costs ${expensiveProduct.productPrice}`)
 
 
 // Створити функцію, яка повинна додавати новий продукт в існуючий масив
 function isParamValid(param, allowNumeric=false)
 {
-    if ( param === '' || param === null || param === undefined )
+    if ( param === '' || param === null || param === undefined ) {
         return false;
-
-    if (allowNumeric && (isNaN(param) || +param < 1))
+    }
+    if (allowNumeric && (isNaN(param) || +param < 1)) {
         return false;
-
+    }
     return true;
 }
 
 function addNewProduct(products) {
     productName = prompt('Enter the product name');
-    productPrice = prompt('Enter price');
-    productQuantity = prompt('Enter Quantity');
+    productPrice = +prompt('Enter price');
+    productQuantity = +prompt('Enter Quantity');
 
-    if (isParamValid(productName) && isParamValid(productPrice, true) && isParamValid(productQuantity, true))
+    if (isParamValid(productName) && isParamValid(productPrice, true) && isParamValid(productQuantity, true)) {
         products.push( {productName, productPrice, productQuantity} )
-    else
+    } else {
         console.log("Something wrong with one of params!")
-
+    }
     return products;
 }    
 console.log(addNewProduct(PRODUCT_ARRAY));
 
 // Створити функцію, яка повинна видаляти конкретний продукт із існуючий масиву продуктів
 function deleteProduct(products) {
-    if (!products instanceof Array || products == [])
+    if (!products instanceof Array || !products.length >0)
         throw "Parameter is not array or empty"
 
-    let value = prompt('Enter product name to delete');
-    if (!isParamValid(value))
-        console.log("USer entered wrong value")
-
-    let indexOfProduct = products.findIndex(element => element.productName === value);
-    if(indexOfProduct < 0)
+    const value = prompt('Enter product name to delete');
+    if (!isParamValid(value)) {
+        console.log("User entered wrong value")
+    }
+    const indexOfProduct = products.findIndex(element => element.productName === value);
+    if(indexOfProduct < 0) {
         console.log("The entered product not found")
-
+    }
     products.splice(indexOfProduct, 1);
 
     return products
