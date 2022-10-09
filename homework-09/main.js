@@ -8,25 +8,25 @@ function Human(name, age, gender, nationality, country, listOfCountries) {
   this.listOfCountries = listOfCountries;
 };
 
-function greeting(greet) {
-  greet = `Hello! My name is ${this.name} I'm ${this.age}, ${this.gender}
+function greeting() {
+  const greet = `Hello! My name is ${this.name} I'm ${this.age}, ${this.gender}
               I'm from ${this.country}. My nationality is ${this.nationality}
               I'd like to visit ${this.listOfCountries} countries`;
   return greet;
 };
 
-function wakeUp(awake) {
-  awake = `Good morning! Have a good day ${this.name}`;
+function wakeUp() {
+  const awake = `Good morning! Have a good day ${this.name}`;
   return awake;
 };
 
-function fallAsleep(asleepy) {
-  asleepy = `You've had the productive day Good night ${this.name}`;
+function fallAsleep() {
+  const asleepy = `You've had the productive day Good night ${this.name}`;
   return asleepy;
 };
 
-function countriesOfDram(travel) {
-  travel = `Hello ${this.name}!  Your journey begins of ${this.listOfCountries} countries`;
+function countriesOfDram() {
+  const travel = `Hello ${this.name}!  Your journey begins of ${this.listOfCountries} countries`;
   return travel;
 };
 
@@ -97,7 +97,7 @@ function compareTwoObjects(obj1, obj2) {
       matchValue[i] = obj1[i];
     }
   });
-  console.log(matchValue);
+  
   if (match == len) {
     return true;
   }
