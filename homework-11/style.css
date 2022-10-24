@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    max-width: 1076px;
+    min-width: 375px;
+    padding: 0 15px;
+    margin: 0 auto;
+
+}
+
+.body {
+    font-family: 'Roboto', 'Arial', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: rgb(178, 175, 175);
+}
+
+.header {
+
+    padding-top: 40px;
+}
+
+ul {
+
+    list-style-type: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-inline-start: 0;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 100%;
+}
+li span {
+    display: inline-block;
+    width: 120px;
+}
+
+
+.even {
+    padding: 10px;
+    background-color: rgb(178, 175, 175);
+}
+
+.odd {
+    padding: 10px;
+    background-color: rgb(114, 114, 117);
+}
+
+.total {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background-color: rgb(114, 114, 117);
+    font-weight: 700;
+}
+
+.most {
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+}
+
+.average {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: rgb(114, 114, 117);
+    font-weight: 700;
+}
+
