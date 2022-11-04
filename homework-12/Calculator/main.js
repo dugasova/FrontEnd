@@ -40,14 +40,14 @@ function handleKey(e) {
       break;
 
     case ".":
-      console.log(parseFloat(output.textContent));
-      if (output.textContent != "" && !output.textContent.includes(".")) {
+      // console.log(parseFloat(output.textContent));
+      if (output.textContent !== "" && !output.textContent.includes(".")) {
         output.textContent += e.target.textContent;
       }
       break;
 
     case "÷":
-      if (firstOperand.textContent != "" && operation != "") {
+      if (firstOperand.textContent !== "" && operation !== "") {
         output.textContent = handleOperation();
         operation = "/";
       } else {
@@ -59,7 +59,7 @@ function handleKey(e) {
       break;
 
     case "*":
-      if (firstOperand.textContent != "" && operation != "") {
+      if (firstOperand.textContent !== "" && operation !== "") {
         output.textContent = handleOperation();
         operation = "*";
       } else {
@@ -71,7 +71,7 @@ function handleKey(e) {
       break;
 
     case "+":
-      if (firstOperand.textContent != "" && operation != "") {
+      if (firstOperand.textContent !== "" && operation !== "") {
         output.textContent = handleOperation();
         operation = "+";
       } else {
@@ -83,7 +83,7 @@ function handleKey(e) {
       break;
 
     case "-":
-      if (firstOperand.textContent != "" && operation != "") {
+      if (firstOperand.textContent !== "" && operation !== "") {
         output.textContent = handleOperation();
         operation = "-";
       } else {
@@ -95,7 +95,7 @@ function handleKey(e) {
       break;
 
     case "=":
-      if (firstOperand.textContent != "" && operation != "") {
+      if (firstOperand.textContent !== "" && operation !== "") {
         output.textContent = handleOperation();
         firstOperand.textContent = "";
         operation = "";
@@ -132,7 +132,7 @@ function handleOperation() {
       break;
 
     default:
-      console.log("Illegial operation", operation);
+      throw "Illegal operation", operation;
   }
 
   computedResultInOutput = true;

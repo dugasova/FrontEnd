@@ -1,6 +1,6 @@
-const addTask = document.querySelector("#addtask");
+const addTask = document.querySelector("#addTask");
 const taskTitle = document.querySelector("#taskTitle");
-const uList = document.querySelector("#ulList");
+const taskList = document.querySelector("#ulList");
 
 addTask.addEventListener("click", (e) => {
   if (taskTitle.value === "") {
@@ -8,7 +8,7 @@ addTask.addEventListener("click", (e) => {
     return;
   }
 
-  const li = document.createElement("li");
+  const listItem = document.createElement("li");
   li.innerHTML = `
     <div class="columns">
     <div class="column is-narrow"><input type="checkbox"></div>
@@ -16,24 +16,23 @@ addTask.addEventListener("click", (e) => {
     <div class="column is-narrow"><button class="delete"></button></div>
     </div>    
     `;
-  checkBox = li.querySelector("input");
+  const checkBox = li.querySelector("input");
   checkBox.addEventListener("click", taskDone);
 
-  deleteButton = li.querySelector("button.delete");
+  const deleteButton = li.querySelector("button.delete");
   deleteButton.addEventListener("click", (e) => {
     li.remove();
   });
 
-  uList.appendChild(li);
+  taskList.appendChild(li);
 
   taskTitle.value = "";
 });
 
 function taskDone(event) {
-  taskName =
+  const taskName =
     event.target.parentElement.parentElement.querySelector("div.column p");
   taskName.style.textDecoration = event.target.checked
     ? "line-through"
     : "none";
-  console.log(taskName);
 }
