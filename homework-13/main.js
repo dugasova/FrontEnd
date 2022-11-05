@@ -41,7 +41,7 @@ let finishTime = 0;
 let timer = null;
 
 startTimer.addEventListener("click", () => {
-  countDownDate = chosenDate.value.trim();
+  const countDownDate = chosenDate.value.trim();
   if (!countDownDate || countDownDate.length === 0) {
     document.getElementById("endtime").innerHTML =
       "Please enter the value, empty value is not allowed!!!";
@@ -100,15 +100,6 @@ const ssdOfPhone = document.getElementById("internal-storage");
 const priceOfPhone = document.querySelector(".price");
 const calculatePriceButton = document.getElementById("button");
 
-function calculatePrice() {
-  let totalPrice =
-    PHONES[modelOfPhone.value].price +
-    PHONES[modelOfPhone.value].ramPrices[ramOfPhone.value] +
-    PHONES[modelOfPhone.value].storagePrices[ssdOfPhone.value];
-  priceOfPhone.innerHTML = `Price of your ${modelOfPhone.value} is ${totalPrice} USD `;
-}
-
-calculatePriceButton.addEventListener("click", calculatePrice);
 const PHONES = {
   iPhone: {
     price: 600,
@@ -120,7 +111,7 @@ const PHONES = {
     ramPrices: [220, 250, 300, 350],
     storagePrices: [155, 200, 255, 300],
   },
-  Sumsung: {
+  Samsung: {
     price: 550,
     ramPrices: [250, 300, 350, 400],
     storagePrices: [200, 250, 300, 350],
@@ -131,3 +122,13 @@ const PHONES = {
     storagePrices: [200, 250, 300, 300],
   },
 };
+
+function calculatePrice() {
+  const totalPrice =
+    PHONES[modelOfPhone.value].price +
+    PHONES[modelOfPhone.value].ramPrices[ramOfPhone.value] +
+    PHONES[modelOfPhone.value].storagePrices[ssdOfPhone.value];
+  priceOfPhone.innerHTML = `Price of your ${modelOfPhone.value} is ${totalPrice} USD `;
+}
+
+calculatePriceButton.addEventListener("click", calculatePrice);
