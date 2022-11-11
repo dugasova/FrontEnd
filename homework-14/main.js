@@ -82,8 +82,7 @@ const getNumber = document.getElementById("btn4");
 const outputResult = document.getElementById("high-and-low");
 
 getNumber.addEventListener("click", () => {
-  outputResult.innerHTML = `From array of numbers the highest ${numbers[0]} 
-  and lowest ${numbers[numbers.length - 1]}numbers is ${highAndLow(
+  outputResult.innerHTML = `From array of numbers the highest and lowest numbers is ${highAndLow(
     inputNumber.value
   )}`;
 });
