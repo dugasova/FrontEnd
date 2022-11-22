@@ -6,7 +6,7 @@ const pagination = document.getElementById("pagination");
 const filmDetails = document.getElementById("details");
 
 function ShowPagination(totalMovies) {
-  for (let i = 0; i * MOVIES_PER_PAGE < totalMovies && i < 5; i++) {
+  for (let i = 0; i * MOVIES_PER_PAGE < totalMovies && i < 15; i++) {
     pagination.innerHTML += `<li onClick="loadData(${i + 1})"> ${i + 1}</li>`;
   }
 }

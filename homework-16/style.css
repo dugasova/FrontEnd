@@ -70,6 +70,7 @@ img {
   margin-bottom: 20px;
 }
 .data-about {
+  margin-top: 20px;
   color: #fff;
 }
 
@@ -114,6 +115,7 @@ img {
   margin-top: 20px;
   margin-bottom: 40px;
   border: none;
+  padding-inline-start: 0px;
 }
 
 .pagination:hover {
@@ -123,7 +125,7 @@ img {
 .pagination li {
   flex: 1;
   padding: 10px 10px;
-  margin: 30px 30px;
+  margin: 15px 15px;
   vertical-align: middle;
   text-align: center;
   cursor: pointer;
