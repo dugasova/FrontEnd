@@ -6,10 +6,17 @@ const pagination = document.getElementById("pagination");
 const filmDetails = document.getElementById("details");
 
 function ShowPagination(totalMovies) {
+  if (
+    document.getElementById("pagination").getElementsByTagName("li").length > 0
+  )
+    return;
+
+  pagination.innerHTML = "";
+
   for (let i = 0; i * MOVIES_PER_PAGE < totalMovies && i < 15; i++) {
-    pagination.innerHTML += `<li class="btns" onClick="loadData(${
-      i + 1
-    }, this)"> ${i + 1}</li>`;
+    const li = document.createElement("li");
+    li.innerHTML = i + 1;
+    pagination.append(li);
   }
 }
 
@@ -43,8 +50,6 @@ async function loadData(page) {
       "<h2 class = header-not-found>Exception in Promise!!!</h2>" + err.message;
     return;
   }
-
-  pagination.innerHTML = "";
 
   if (movies.Response === "False") {
     searchResults.innerHTML =
@@ -100,4 +105,19 @@ async function moreDetails(movieId) {
   Director:${moreData.Director}<br>Writer:${moreData.Director}<br>Rating:${moreData.imdbRating}`;
 }
 
-getFilm.addEventListener("click", loadData);
+getFilm.addEventListener("click", () => {
+  pagination.innerHTML = "";
+  loadData();
+});
+
+pagination.addEventListener("click", (e) => {
+  const pages = document.querySelectorAll("ul li");
+
+  pages.forEach((item) => {
+    item.classList.remove("active");
+  });
+
+  pageIndex = +e.target.innerHTML - 1;
+  e.target.classList.add("active");
+  loadData(pageIndex);
+});
