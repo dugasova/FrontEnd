@@ -23,7 +23,7 @@ function loadData(page) {
   }
 
   let filmUrl =
-    "http://www.omdbapi.com/?apikey=a0d12fb1&s=" + searchInput.value;
+    "https://www.omdbapi.com/?apikey=a0d12fb1&s=" + searchInput.value;
 
   if (page > 0) {
     filmUrl += "&page=" + page;
@@ -68,7 +68,7 @@ function loadData(page) {
 
 function moreDetails(movieId) {
   moreDetails.innerHTML = "";
-  const moreFilmUrl = "http://www.omdbapi.com/?apikey=a0d12fb1&i=" + movieId;
+  const moreFilmUrl = "https://www.omdbapi.com/?apikey=a0d12fb1&i=" + movieId;
 
   const moreData = fetch(moreFilmUrl);
 
