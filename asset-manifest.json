@@ -1,13 +1,17 @@
 {
   "files": {
-    "main.css": "/FrontEnd/static/css/main.11faf8a5.css",
-    "main.js": "/FrontEnd/static/js/main.56875dc9.js",
+    "main.css": "/FrontEnd/static/css/main.d462cbeb.css",
+    "main.js": "/FrontEnd/static/js/main.a5892dc9.js",
+    "static/media/gilroy-bold-webfont.woff": "/FrontEnd/static/media/gilroy-bold-webfont.d57c54a16decc4f4adad.woff",
+    "static/media/gilroy-regular-webfont.woff": "/FrontEnd/static/media/gilroy-regular-webfont.bc44fd7f7a5d4bcd9b22.woff",
+    "static/media/gilroy-bold-webfont.woff2": "/FrontEnd/static/media/gilroy-bold-webfont.d84b042307cf47ce2165.woff2",
+    "static/media/gilroy-regular-webfont.woff2": "/FrontEnd/static/media/gilroy-regular-webfont.9cc2fab347dc9c873332.woff2",
     "index.html": "/FrontEnd/index.html",
-    "main.11faf8a5.css.map": "/FrontEnd/static/css/main.11faf8a5.css.map",
-    "main.56875dc9.js.map": "/FrontEnd/static/js/main.56875dc9.js.map"
+    "main.d462cbeb.css.map": "/FrontEnd/static/css/main.d462cbeb.css.map",
+    "main.a5892dc9.js.map": "/FrontEnd/static/js/main.a5892dc9.js.map"
   },
   "entrypoints": [
-    "static/css/main.11faf8a5.css",
-    "static/js/main.56875dc9.js"
+    "static/css/main.d462cbeb.css",
+    "static/js/main.a5892dc9.js"
   ]
 }
