@@ -1,11 +1,11 @@
 // a.
-const myName = 'Nataly';
+const MY_Name = 'Nataly';
 // b.
-const mySurname = 'Dugasova';
+const MY_Surname = 'Dugasova';
 // c.
-const myCity = 'Sevastopol';
+const MY_City = 'Sevastopol';
 // d.
-let avarage = (2 + 3 + 6 + 5) / 4;
+let average = (2 + 3 + 6 + 5) / 4;
 // e.
 let circleRadius = 6378.1;
 // f.
@@ -24,8 +24,8 @@ is my long long
 comment
 */
 
-console.log(myName, mySurname, myCity);
-console.log(avarage);
+console.log(MY_Name, MY_Surname, MY_City);
+console.log(average);
 console.log(circleRadius);
 console.log(circumference);
 console.log(circleArea);
