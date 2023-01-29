@@ -1,19 +1,17 @@
 import styled from "styled-components";
-
+import LogoImg from "./../../../assets/Logo.png";
 
 const Logo = () => {
   return (
-    <LogoStyled>
-      Logo
-     </LogoStyled>
+    <LogoStyled src = {LogoImg} />
+      
   );
 };
 
-const LogoStyled = styled.div({
-  backgroundColor: "#F1F2AE",
-  margin: "0 10px",
-  width: "181px",
-  height: "37px",
+const LogoStyled = styled.img({
+  margin: "0 25px",
+  width: "80px",
+  height: "87px",
   textAlign: "center"
 });
 

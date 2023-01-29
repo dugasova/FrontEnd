@@ -17,6 +17,8 @@ const MenuStyled = styled.ul({
   listStyle: "none",
   justifyContent: "space-around",
   flexBasis: "18%",
+  margin: "0 15px",
+  color: "#3c1414"
 });
 
 export default Menu;
