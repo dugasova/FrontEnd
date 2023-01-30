@@ -1,7 +1,14 @@
+function isValidValue(value) {
+    if (isNaN(value) || value === null || value === undefined || typeof value !== "number") {
+        return true
+    } else {
+        return false
+    }
+}
 // 1
 function compareNumbers(num1, num2, num3, num4) {
-    if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4)) {
-        throw 'Parameter is not a number!';
+    if (isValidValue(num1) || isValidValue(num2) || isValidValue(num3) || isValidValue(num4)) {
+        throw 'Parameter is not correct, please enter a number!';
     }
 
     let result;
@@ -27,7 +34,7 @@ function compareNumbers(num1, num2, num3, num4) {
 console.log(compareNumbers(12, 2, 4, -5));
 
 const lesserNumber = function (num1, num2, num3, num4) {
-    if (isNaN(num1) || isNaN(num2) || isNaN(num3) || isNaN(num4)) {
+    if (isValidValue(num1) || isValidValue(num2) || isValidValue(num3) || isValidValue(num4)) {
         throw 'Parameter is not a number!';
     }
     return Math.min(num1, num2, num3, num4);
@@ -36,7 +43,7 @@ console.log(lesserNumber(2, 3, -7, 8));
 
 // 2
 function greatestCommonDivisor(a, b) {
-    if (isNaN(a) || isNaN(b)) {
+    if (isValidValue(a) || isValidValue(b)) {
         throw 'Parameter is not a number!';
     }
     if (!Number.isInteger(a) || (!Number.isInteger(b))) {
@@ -58,11 +65,8 @@ console.log(greatestCommonDivisor(45, 15))
 
 // 3
 const isPerfectNumber = function (n) {
-    if (isNaN(n)) {
+    if (isValidValue(n)) {
         throw 'Parameter is not a number!';
-    }
-    if (n < 1) {
-        throw 'Illegal parameter!'
     }
 
     let sum = 0;
@@ -80,7 +84,7 @@ console.log(isPerfectNumber(6));
 
 // 4
 const getSumNumbers = (a, b) => {
-    if (isNaN(a) || isNaN(b)) {
+    if (isValidValue(a) || isValidValue(b)) {
         throw 'Parameter is not a number!';
     }
 
@@ -100,13 +104,13 @@ console.log(getSumNumbers(9, -1));
 
 //  5 
 const toFahrenheit = (celsius) => {
-    if (isNaN(celsius)) {
+    if (isValidValue(celsius)) {
         throw 'Parameter is not a number!';
     }
 
     return ((celsius * 9 / 5) + 32);
 }
-console.log(toFahrenheit(-20));
+console.log(toFahrenheit(0));
 
 // 6
 function getRandomNumber(min, max) {
