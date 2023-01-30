@@ -1,4 +1,4 @@
-function isValidValue(value) {
+function isInvalidValidValue(value) {
     if (isNaN(value) || value === null || value === undefined || typeof value !== "number") {
         return true
     } else {
@@ -7,7 +7,7 @@ function isValidValue(value) {
 }
 // 1
 function compareNumbers(num1, num2, num3, num4) {
-    if (isValidValue(num1) || isValidValue(num2) || isValidValue(num3) || isValidValue(num4)) {
+    if (isInvalidValidValue(num1) || isInvalidValidValue(num2) || isInvalidValidValue(num3) || isInvalidValidValue(num4)) {
         throw 'Parameter is not correct, please enter a number!';
     }
 
@@ -34,7 +34,7 @@ function compareNumbers(num1, num2, num3, num4) {
 console.log(compareNumbers(12, 2, 4, -5));
 
 const lesserNumber = function (num1, num2, num3, num4) {
-    if (isValidValue(num1) || isValidValue(num2) || isValidValue(num3) || isValidValue(num4)) {
+    if (isInvalidValidValue(num1) || isInvalidValidValue(num2) || isInvalidValidValue(num3) || isInvalidValidValue(num4)) {
         throw 'Parameter is not a number!';
     }
     return Math.min(num1, num2, num3, num4);
@@ -43,7 +43,7 @@ console.log(lesserNumber(2, 3, -7, 8));
 
 // 2
 function greatestCommonDivisor(a, b) {
-    if (isValidValue(a) || isValidValue(b)) {
+    if (isInvalidValidValue(a) || isInvalidValidValue(b)) {
         throw 'Parameter is not a number!';
     }
     if (!Number.isInteger(a) || (!Number.isInteger(b))) {
@@ -65,7 +65,7 @@ console.log(greatestCommonDivisor(45, 15))
 
 // 3
 const isPerfectNumber = function (n) {
-    if (isValidValue(n)) {
+    if (isInvalidValidValue(n)) {
         throw 'Parameter is not a number!';
     }
 
@@ -84,7 +84,7 @@ console.log(isPerfectNumber(6));
 
 // 4
 const getSumNumbers = (a, b) => {
-    if (isValidValue(a) || isValidValue(b)) {
+    if (isInvalidValidValue(a) || isInvalidValidValue(b)) {
         throw 'Parameter is not a number!';
     }
 
@@ -104,7 +104,7 @@ console.log(getSumNumbers(9, -1));
 
 //  5 
 const toFahrenheit = (celsius) => {
-    if (isValidValue(celsius)) {
+    if (isInvalidValidValue(celsius)) {
         throw 'Parameter is not a number!';
     }
 
