@@ -7,9 +7,9 @@ function isInvalidValue(value) {
     return !Boolean(value);
 }
 
-function createNewTeam(driverName, driversYearBirth, teamName, carBrand, sponsorName, isAdmited) {
+function createNewTeam(driverName, driversYearBirth, teamName, carBrand, sponsorName, isAdmitted) {
     if (isInvalidValue(driverName) || isInvalidValue(driversYearBirth) ||
-        isInvalidValue(teamName) || isInvalidValue(carBrand) || isInvalidValue(sponsorName) || isInvalidValue(isAdmited)) {
+        isInvalidValue(teamName) || isInvalidValue(carBrand) || isInvalidValue(sponsorName) || isInvalidValue(isAdmitted)) {
         throw 'Please enter correct data'
     }
     if (driversYearBirth < 1) {
@@ -22,7 +22,7 @@ function createNewTeam(driverName, driversYearBirth, teamName, carBrand, sponsor
         teamName,
         carBrand,
         sponsorName,
-        isAdmited: Boolean(isAdmited)
+        isAdmitted: Boolean(isAdmitted)
     }
 }
 // console.log(createNewTeam(undefined, -1984, null, NaN,[],{}));
@@ -68,7 +68,7 @@ const STUDENT = {
         console.log('Hi everyone!');
     },
     addHomeWork() {
-        console.log('Sending my howework... Please, wait');
+        console.log('Sending my homework... Please, wait');
     }
 }
 STUDENT.greeting();
@@ -77,14 +77,11 @@ STUDENT.addHomeWork();
 // 5
 const EMPTY_OBJECT = {};
 const NON_EMPTY_OBJECT = { a: 1 };
-function isEmpty(object) {
-    for (const property in object) {
-        return false;
-    }
-    return true;
+function isEmpty(value) {
+    return Object.keys(value).length === 0 ? true : false;
 }
-console.log(isEmpty(EMPTY_OBJECT));
-console.log(isEmpty(NON_EMPTY_OBJECT));
+console.log("is empty", isEmpty(EMPTY_OBJECT));
+console.log("is not empty", isEmpty(NON_EMPTY_OBJECT));
 
 // 6
 const TEAM_OF_SELLERS = {
