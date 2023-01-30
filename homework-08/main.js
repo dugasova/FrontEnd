@@ -87,7 +87,7 @@ console.log(addNewProduct(PRODUCT_ARRAY));
 
 // Створити функцію, яка повинна видаляти конкретний продукт із існуючий масиву продуктів
 function deleteProduct(products) {
-    if (!products instanceof Array || !products.length >0)
+    if (!products instanceof Array || !products.length > 0)
         throw "Parameter is not array or empty"
 
     const value = prompt('Enter product name to delete');
