@@ -78,3 +78,15 @@ li span {
     font-weight: 700;
 }
 
+span.exclamationMark::after {
+    content: "!";
+    color: red;
+    font-size: 22px;
+}
+
+span.checkMark::after {
+    content: "✓";
+    color: blue;
+    font-size: 22px;
+}
+

@@ -193,9 +193,9 @@ const PRODUCT_LIST = [
     },
   ];
   const container = document.getElementById("container");
-  const listOfProducts = document.createElement("h1");
-  listOfProducts.className = "header";
-  listOfProducts.innerHTML = "List of product";
+  const headingProductList = document.createElement("h1");
+  headingProductList.className = "header";
+  headingProductList.innerHTML = "List of product";
   const uList = document.createElement("ul");
   
   PRODUCT_LIST.forEach((lisItem, itemIndex) => {
@@ -213,16 +213,12 @@ const PRODUCT_LIST = [
     item.appendChild(price)
   
     if (!lisItem.productData.certificate) {
-      const exclamatioMark = document.createElement("span");
-      exclamatioMark.style.color = "red";
-      exclamatioMark.style.fontSize = "22px";
-      exclamatioMark.innerText = "!";
-      item.appendChild(exclamatioMark);
+      const exclamationMark = document.createElement("span");
+      exclamationMark.className = "exclamationMark"
+      item.appendChild(exclamationMark);
     } else {
       const chekMark = document.createElement("span");
-      chekMark.style.color = "blue";
-      chekMark.style.fontSize = "22px";
-      chekMark.innerText = "✓";
+      chekMark.className = "checkMark"
       item.appendChild(chekMark);
     }
     if (lisItem.productData.sugarFree) {
@@ -262,7 +258,7 @@ const PRODUCT_LIST = [
   averageOfProduct.className = "average";
   averageOfProduct.innerHTML = `Average price for products is  ${averagePrice} UAH`;
   
-  container.appendChild(listOfProducts);
+  container.appendChild(headingProductList);
   container.appendChild(uList);
   container.appendChild(totalProductlPrice);
   container.appendChild(mostExpensiveProduct);
