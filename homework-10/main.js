@@ -145,7 +145,7 @@ function dealer(car) {
         * PRICE[car.carBodyStyle].engine[car.typeOfEngine] 
         * PRICE[car.carBodyStyle].weight[weightPriceIndex];
     
-    console.log(`Ваше авто було пошкоджене на ${(100 - car.serviceability).toFixed(2)}, вартість ремонту ${price.toFixed(2)}`);
+    console.log(`Your car was damaged on ${(100 - car.serviceability).toFixed(2)}, cost of repair ${price.toFixed(2)}`);
 
     car.serviceability = 100;
 };
