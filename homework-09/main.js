@@ -75,38 +75,32 @@ let f = canTravel.myBind(person1);
 console.log(f()); // Bob will be able to travel in half a year
 
 // 3
-function compareTwoObjects(obj1, obj2) {
-  const isObject = (obj) => {
-    return Object.prototype.toString.call(obj) === "[object Object]";
-  };
-  if (!isObject(obj1) || !isObject(obj2)) {
-    return false;
-  }
-  let len = null;
-  if (Object.keys(obj1).length != Object.keys(obj2).length) {
-    return false;
-  } else {
-    len = Object.keys(obj1).length;
-  }
-  let i = 0;
-  let match = 0;
-  let matchValue = {};
-  Object.keys(obj1).forEach((i) => {
-    if (obj1[i] === obj2[i]) {
-      match++;
-      matchValue[i] = obj1[i];
-    }
-  });
-  
-  if (match == len) {
-    return true;
-  }
-  return false;
-}
-obj1 = { name: "Dmitro", age: 25, nationality: "ukranian" };
-obj2 = { name: "Dmitro", age: 29, nationality: "ukranian" };
 
-console.log(compareTwoObjects(obj1, obj2)); //false
+const isObject = (object) => {
+    return object != null && typeof object === "object";
+}
+
+function compareTwoObjects(obj1, obj2) {
+  const objKeys1 = Object.keys(obj1);
+  const objKeys2 = Object.keys(obj2);
+
+  if (objKeys1.length !== objKeys2.length) {
+    return false;
+  }
+
+  for (let key of objKeys1) {
+    const isObjects = isObject(obj1[key]) && isObject(obj2[key]);
+    if ((isObjects &&  !compareTwoObjects(obj1[key], obj2[key])) || (!isObjects && obj1[key] !== obj2[key])) {
+      return false
+    }
+  }
+  return true;
+};
+
+obj1 = {a: 1, b: {c: 2}}
+obj2 = {a: 1, b: {c: 2} }
+
+console.log(compareTwoObjects(obj1, obj2));
 
 // 4
 function enterData() {
