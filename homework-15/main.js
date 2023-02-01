@@ -18,7 +18,6 @@ const CITY_LIST = {
 const city = document.getElementById("enter-city");
 const getWeather = document.getElementById("btn");
 const message = document.getElementById("weather");
-const getBakground = document.getElementById("body");
 
 function loadData(cityId) {
   const xhttp = new XMLHttpRequest();
@@ -33,7 +32,10 @@ function loadData(cityId) {
   xhttp.send();
 
   xhttp.onreadystatechange = function () {
-    if (this.readyState === 4 && this.status === 200) {
+    if (this.status !== 200) {
+      return   message.innerHTML = "Something went wrong, please try again";
+    } else if
+     (this.readyState === 4 && this.status === 200) {
       const result = JSON.parse(this.response);
       message.innerHTML = `<h2>Weather in ${city.value}</h2>`;
       result.DailyForecasts.forEach((item) => {
