@@ -82,10 +82,10 @@ function moreDetails(movieId) {
         (data.Poster !== "N/A"
           ? `<img class="data-result" src=${data.Poster}>`
           : "") +
-        `<div class ="data-about"<br> Title: ${data.Title}<br> Relised: ${data.Released}<br>
-    Country: ${data.Country}<br>Actors: ${data.Actors}<br> 
-    Genre:${data.Genre}<br> Runtime:${data.Runtime}<br> Plot:${data.Plot}<br>
-    Director:${data.Director}<br>Writer:${data.Director}<br>Rating:${data.imdbRating}`;
+        `<div class ="data-about"<br> Title:  ${data.Title}<br> Relised:  ${data.Released}<br>
+    Country: ${data.Country}<br>Actors:  ${data.Actors}<br> 
+    Genre:  ${data.Genre}<br> Runtime:  ${data.Runtime}<br> Plot:  ${data.Plot}<br>
+    Director:  ${data.Director}<br>Writer:  ${data.Director}<br>Rating:  ${data.imdbRating}`;
     });
 }
 getFilm.addEventListener("click", loadData);
