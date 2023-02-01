@@ -6,33 +6,26 @@ const weather = document.getElementById("weather");
 const neighbors = document.getElementById("neighbors");
 
 async function getCityId(city) {
-    const keyUrl = "https://dataservice.accuweather.com/locations/v1/cities/search?apikey=" + API_KEY+"&q=" + city;
+    const keyUrl = `https://dataservice.accuweather.com/locations/v1/cities/search?apikey=${API_KEY}&q=${city}`;
     try {
       const result =  await (await fetch(keyUrl)).json();
       return result[0].Key;
     }
-    catch(err) {
+    catch(err){
       weather.innerHTML = "<h2>Error getting city " +': ' + err.message + '</h2>'
-      return
     }
 }
 
-function loadNeighborData(event)
-{
+function loadNeighborData(event) {
     loadData(event.target.dataset.cityId,event.target.dataset.cityName)
 }
 
 async function loadData(cityId, cityName) {
   if (!cityId) {
     weather.innerHTML = "<h2>There are no weather info for the city " + cityName + '</h2>'
-    return
   }
 
-  const cityForcastUrl = "https://dataservice.accuweather.com/forecasts/v1/daily/5day/" +
-  cityId +
-  "?apikey=" +
-  API_KEY+
-  "&metric=true"
+  const cityForcastUrl = `https://dataservice.accuweather.com/forecasts/v1/daily/5day/${cityId}?apikey=${API_KEY}&metric=true`
 
   try {
     const weatherCity = await (await fetch(cityForcastUrl)).json();
@@ -64,8 +57,7 @@ async function loadData(cityId, cityName) {
     return
   }
 
-  const locationDataUrl = "https://dataservice.accuweather.com/locations/v1/cities/neighbors/" + cityId+
-  "?apikey=" + API_KEY;
+  const locationDataUrl = `https://dataservice.accuweather.com/locations/v1/cities/neighbors/${cityId}?apikey=${API_KEY}`;
   try {
     const citiesNeighbors = await(await fetch(locationDataUrl)).json();
 
@@ -87,20 +79,17 @@ async function loadData(cityId, cityName) {
   }
   catch(err){
     weather.innerHTML = "<h2>Error getting weather for the city " + cityName +': ' + err.message + '</h2>'
-    return
-
   }
 }
 
 async function loadBackground(cityId) {
-    const BgUrl = "https://api.unsplash.com/photos/random?client_id=-qo2R2MZRQA7vO0qZkxKtKn-ksVDkFzVce0BrnXPQeE&orientation=landscape&query=" +
-      cityId;
+    const BgUrl = `https://api.unsplash.com/photos/random?client_id=-qo2R2MZRQA7vO0qZkxKtKn-ksVDkFzVce0BrnXPQeE&orientation=landscape&query=${cityId}`;
     try {
       const background = await (await fetch(BgUrl)).json();
       const photo = background.links.download;
       body.style.backgroundImage = "url('" + photo + "')";
     }
-    catch(err){
+    catch(err) {
       console.log("Error loading background:", err.message)
     }
 }

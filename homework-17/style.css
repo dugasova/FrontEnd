@@ -46,6 +46,9 @@ body {
     margin: 18px;
     box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
 }
+#weather {
+    width: 250px;
+}
 
 .forecaststDaly {
     display: flex;
@@ -57,8 +60,7 @@ body {
 
 .neighbor-city {
     cursor: pointer;
-    font-size: 900;
-    align-self: start;
+    margin-top: 20px;
 }
 
 .weather-detail {
@@ -69,10 +71,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-left: 20px;
     backdrop-filter: blur(10px);
 }
 
 #neighbors {
     display: flex;
+    justify-content: center;
+    width: 250px;
 }
