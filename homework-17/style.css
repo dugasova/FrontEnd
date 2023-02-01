@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: sans-serif;
+    font-size: 700;
+    background-color: rgb(106, 149, 182);
+    background-size: cover;
+}
+
+.container {
+    max-width: 1676px;
+    min-width: 375px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+#enter-city {
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 50px 0;
+    cursor: pointer;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+}
+
+#enter-city {
+    outline: none;
+}
+
+#btn {
+    border-radius: 4px;
+    background-color: #5ca1e1;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    padding: 8px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 18px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
+}
+#weather {
+    width: 250px;
+}
+
+.forecaststDaly {
+    display: flex;
+    padding-left: 20px;
+    backdrop-filter: blur(10px);
+    width: 300px;
+    margin-bottom: 40px;
+}
+
+.neighbor-city {
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.weather-detail {
+    align-items: flex-start;
+}
+
+#weather-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    backdrop-filter: blur(10px);
+}
+
+#neighbors {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+}
