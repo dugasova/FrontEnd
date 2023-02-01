@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container {
+    max-width: 1076px;
+    min-width: 375px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.section-1 {
+    padding-top: 60px;
+}
+
+.paragraph {
+    margin: 20px;
+    font-weight: 700;
+}
+
+.section-2 {
+    padding-top: 40px;
+}
+
+h3 {
+    padding-top: 40px;
+}
+
+#endtime {
+    padding-top: 30px;
+    font-weight: 600;
+}
+
+.section-3 {
+    padding-top: 50px;
+}
+
+.price {
+    padding-top: 30px;
+    font-weight: 600;
+}

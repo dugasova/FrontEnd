@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Homework 13</title>
+</head>
+
+<body>
+    <div class="container">
+        <section class="section-1">
+            <label for="input">Time to end</label>
+            <input type="text" class="input1" id="input"><button class="btn" id="btn">Start Timeout</button>
+            <p class="paragraph"></p>
+        </section>
+        <section class="section-2">
+            <label for="input2"></label>
+            <input type="date" class="input2" id="input2">
+            <button class="btn-campaing" id="btn-campaign">Start Campaign</button>
+            <p id="endtime"></p>
+        </section>
+        <section class="section-3">
+            <label for="model">Model of phone:</label>
+            <select name="model" id="model">
+                <option value="iPhone">iPone 14</option>
+                <option value="Pixel">Pixel 7</option>
+                <option value="Samsung">Samsung S22</option>
+                <option value="Oneplus">One plus 10</option>
+            </select>
+            <label for="ram">Choose a RAM:</label>
+            <select name="ram" id="ram">
+                <option value="0">2</option>
+                <option value="1">4</option>
+                <option value="2">8</option>
+                <option value="3" class="chose">12</option>
+            </select>
+            <label for="internal-storage">An internal storage:</label>
+            <select name="internal-storage" id="internal-storage">
+                <option value="0">64</option>
+                <option value="1">128</option>
+                <option value="2">256</option>
+                <option value="3">512</option>
+            </select>
+            <button class="button" id="button">Get price</button>
+            <p class="price"></p>
+        </section>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
