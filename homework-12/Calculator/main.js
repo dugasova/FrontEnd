@@ -40,7 +40,6 @@ function handleKey(e) {
       break;
 
     case ".":
-      // console.log(parseFloat(output.textContent));
       if (output.textContent !== "" && !output.textContent.includes(".")) {
         output.textContent += e.target.textContent;
       }
@@ -110,6 +109,7 @@ function handleKey(e) {
 
 function handleOperation() {
   let result = 0;
+
   switch (operation) {
     case "+":
       result =
@@ -129,15 +129,19 @@ function handleOperation() {
     case "/":
       result = 
         parseFloat(firstOperand.textContent) / parseFloat(output.textContent);
-      break;
-
-    default:
-      throw "Illegal operation", operation;
+        break;
+        
+        default:
+          throw "Illegal operation", operation;
+        }
+        
+        computedResultInOutput = true;
+        
+  if (result === Infinity) {
+    return 'Cannot divide by zero'
+  } else {
+    return Math.round10(result, -2);
   }
-
-  computedResultInOutput = true;
-
-  return Math.round10(result, -2);
 }
 
 // https://stackoverflow.com/questions/9453421/how-to-round-float-numbers-in-javascript/19794305#19794305

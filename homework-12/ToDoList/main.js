@@ -1,6 +1,6 @@
 const addTask = document.querySelector("#addTask");
 const taskTitle = document.querySelector("#taskTitle");
-const taskList = document.querySelector("#ulList");
+const taskList = document.querySelector("#taskList");
 
 addTask.addEventListener("click", (e) => {
   if (taskTitle.value === "") {
@@ -9,22 +9,22 @@ addTask.addEventListener("click", (e) => {
   }
 
   const listItem = document.createElement("li");
-  li.innerHTML = `
+  listItem.innerHTML = `
     <div class="columns">
     <div class="column is-narrow"><input type="checkbox"></div>
     <div class="column"><p class="title is-4">${taskTitle.value}</p></div>
     <div class="column is-narrow"><button class="delete"></button></div>
     </div>    
     `;
-  const checkBox = li.querySelector("input");
+  const checkBox = listItem.querySelector("input");
   checkBox.addEventListener("click", taskDone);
 
-  const deleteButton = li.querySelector("button.delete");
+  const deleteButton = listItem.querySelector("button.delete");
   deleteButton.addEventListener("click", (e) => {
-    li.remove();
+    listItem.remove();
   });
 
-  taskList.appendChild(li);
+  taskList.appendChild(listItem);
 
   taskTitle.value = "";
 });
