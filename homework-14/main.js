@@ -72,7 +72,7 @@ function spinWords(str) {
   return newString;
 }
 getPhrase.addEventListener("click", () => {
-  reversedSubString.innerHTML = `It is a new str ${spinWords(
+  reversedSubString.innerHTML = `It is a new str:  ${spinWords(
     enteredPhrase.value
   )}`;
 });
