@@ -49,6 +49,13 @@ body {
   border: none;
 }
 
+#btn:hover {
+  box-shadow: inset 250px 0 0 0 #6c5d74;
+  opacity: 0, 8;
+  cursor: pointer;
+  transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+}
+
 #searchResults {
   display: grid;
   justify-content: space-between;

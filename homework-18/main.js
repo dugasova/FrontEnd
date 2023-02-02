@@ -95,10 +95,10 @@ async function moreDetails(movieId) {
     (moreData.Poster !== "N/A"
       ? `<img class="data-result" src=${moreData.Poster}>`
       : `<img src="/homework-18/img/movie.jpg">`) +
-    `<div class ="data-about"<br> Title: ${moreData.Title}<br> Relised: ${moreData.Released}<br>
-  Country: ${moreData.Country}<br>Actors: ${moreData.Actors}<br> 
-  Genre:${moreData.Genre}<br> Runtime:${moreData.Runtime}<br> Plot:${moreData.Plot}<br>
-  Director:${moreData.Director}<br>Writer:${moreData.Director}<br>Rating:${moreData.imdbRating}`;
+    `<div class ="data-about"<br> Title:  ${moreData.Title}<br> Relised:  ${moreData.Released}<br>
+  Country:  ${moreData.Country}<br>Actors:  ${moreData.Actors}<br> 
+  Genre:  ${moreData.Genre}<br> Runtime:  ${moreData.Runtime}<br> Plot:  ${moreData.Plot}<br>
+  Director: ${moreData.Director}<br>Writer:  ${moreData.Director}<br>Rating:  ${moreData.imdbRating}`;
 }
 
 getFilm.addEventListener("click", () => {
