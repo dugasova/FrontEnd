@@ -27,7 +27,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient(90deg, #f4bd57 0%, #d08412 100%);
-  /* background: linear-gradient(#bc581e, #e27b36); */
 }
 
 .create {

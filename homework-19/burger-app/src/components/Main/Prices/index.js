@@ -24,8 +24,6 @@ const Prices = ({allPrices}) => {
 const PricesStyled = styled.div({
     display: "flex",
     flexDirection: "column",
-    // backgroundColor: "#
-    // background: "linear-gradient(90deg, #fcff9e 0%, #c67700 100%)",
     alignContent: "center",
     justifyContent: "center",
     width:"25%",

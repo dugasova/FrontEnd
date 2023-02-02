@@ -1,5 +1,5 @@
 import styled from "styled-components"
-const Button = ({action, children}) => {
+const Button = ({children}) => {
         return (
             <ButtonStyled>{children}</ButtonStyled>
         );
