@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Find your movie</title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="header">Find Your Movie</h1>
+    <label for="input">
+      <input type="text" id="input" placeholder="Batman" name="movie" value="batman">
+    </label>
+    <button id="btn">Get result</button>
+    <div class="wrap-result">
+      <div id="searchResults"></div>
+    </div>
+    <div class="wrap-details">
+      <div id="details"></div>
+    </div>
+    <ul id="pagination" class="pagination"></ul>
+  </div>
+  <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+
+</html>
